@@ -16,7 +16,6 @@ import {
   ChevronLeft,
   Plus,
   Sparkles,
-  Flame,
   Clock,
   ChefHat,
   Loader2,
@@ -26,6 +25,8 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import toast from "react-hot-toast";
+import JafaHeroDesign from "@/components/JafaHeroDesign";
+import JaffaStoryCard from "@/components/JaffaStoryCard";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -285,92 +286,14 @@ export default function HomePage() {
             </motion.div>
           </motion.div>
 
-          {/* Hero Image with dramatic effects */}
+          {/* Hero graphic card (replaces hero picture) */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="relative mx-auto hidden md:block"
+            initial={{ opacity: 0, scale: 0.92, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            className="relative mx-auto block w-full max-w-[520px]"
           >
-            {/* Outer glow rings */}
-            <div className="absolute inset-0 -z-10 scale-125 rounded-full bg-clay-600/20 blur-[80px]" />
-            <div className="absolute inset-0 -z-10 scale-110 rounded-full bg-flag-green/10 blur-[60px] animate-pulse" />
-            
-            {/* Rotating decorative ring */}
-            <div className="absolute -inset-8 -z-10">
-              <div className="h-full w-full rounded-full border border-white/5 animate-spin-slow" style={{ animationDuration: '20s' }} />
-            </div>
-            <div className="absolute -inset-12 -z-10">
-              <div className="h-full w-full rounded-full border border-dashed border-white/5 animate-spin-slow" style={{ animationDuration: '30s', animationDirection: 'reverse' }} />
-            </div>
-
-            <div className="relative mx-auto aspect-square w-80 overflow-hidden rounded-[3rem] ring-1 ring-white/10 shadow-2xl lg:w-96">
-              <Image
-                src="/hero-logo.jpg"
-                alt="شعار مطعم يافا"
-                fill
-                priority
-                className="object-cover"
-              />
-              {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-olive-900/50 via-transparent to-olive-900/10" />
-              
-              {/* Shine effect */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 transition-opacity duration-700 hover:opacity-100" />
-            </div>
-
-            {/* Floating badges with enhanced animation */}
-            <motion.div
-              initial={{ opacity: 0, y: 30, x: -20 }}
-              animate={{ opacity: 1, y: 0, x: 0 }}
-              transition={{ delay: 0.8, duration: 0.6, type: "spring" }}
-              className="absolute -bottom-6 -left-6 rounded-2xl bg-white p-5 shadow-2xl shadow-black/20 backdrop-blur-md lg:-left-10"
-            >
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-clay-100 to-clay-200 text-clay-600 shadow-sm">
-                  <Flame className="h-6 w-6" />
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-olive-900">أطباق شعبية</p>
-                  <p className="text-[11px] text-olive-500">محضّرة بالطريقة الأصيلة</p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: -30, x: 20 }}
-              animate={{ opacity: 1, y: 0, x: 0 }}
-              transition={{ delay: 1, duration: 0.6, type: "spring" }}
-              className="absolute -top-6 -right-6 rounded-2xl bg-white p-5 shadow-2xl shadow-black/20 backdrop-blur-md lg:-right-10"
-            >
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-flag-green/20 to-flag-green/10 text-flag-green shadow-sm">
-                  <Star className="h-6 w-6 fill-flag-green" />
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-olive-900">تقييم ممتاز</p>
-                  <p className="text-[11px] text-olive-500">+5000 عميل سعيد</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Third badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.2, duration: 0.5, type: "spring" }}
-              className="absolute top-1/2 -right-4 rounded-xl bg-white/95 p-3 shadow-xl shadow-black/10 backdrop-blur-md lg:-right-8"
-            >
-              <div className="flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-amber-100 text-amber-600">
-                  <Clock className="h-4 w-4" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-olive-900">مفتوح الآن</p>
-                  <p className="text-[10px] text-olive-500">١٠ ص — ١٢ ص</p>
-                </div>
-              </div>
-            </motion.div>
+            <JafaHeroDesign />
           </motion.div>
         </div>
 
@@ -726,9 +649,8 @@ export default function HomePage() {
             className="relative mx-auto order-1 md:order-2"
           >
             <div className="absolute inset-0 -z-10 scale-105 rounded-[2rem] bg-clay-200/30 blur-2xl" />
-            <div className="relative mx-auto aspect-[4/5] w-72 overflow-hidden rounded-[2rem] ring-4 ring-clay-100/50 shadow-2xl md:w-80">
-              <Image src="/logo.jpeg" alt="مطعم يافا" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-olive-900/20 to-transparent" />
+            <div className="relative mx-auto w-72 md:w-[430px]">
+              <JaffaStoryCard />
             </div>
             {/* Decorative elements */}
             <div className="absolute -top-4 -right-4 h-24 w-24 rounded-full bg-clay-100/50 blur-xl" />

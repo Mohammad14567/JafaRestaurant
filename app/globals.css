@@ -124,3 +124,149 @@ body {
 .animate-spin-slow {
   animation: spin-slow linear infinite;
 }
+
+/* ===== Jafa Hero Design Animations ===== */
+@keyframes jc-driftUp {
+  0% { opacity: 0; transform: translateY(0) scale(0.5); }
+  12% { opacity: 0.85; }
+  100% { opacity: 0; transform: translateY(-130px) scale(1.15); }
+}
+
+@keyframes jc-floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes jc-floatYsm {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+@keyframes jc-pulseGlow {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50% { opacity: 0.95; transform: scale(1.1); }
+}
+
+@keyframes jc-steam {
+  0% { opacity: 0; transform: translateY(0) scaleX(1); }
+  18% { opacity: 0.55; }
+  100% { opacity: 0; transform: translateY(-78px) scaleX(2.1); }
+}
+
+@keyframes jc-ringPulse {
+  0% { transform: scale(0.8); opacity: 0.55; }
+  100% { transform: scale(1.45); opacity: 0; }
+}
+
+@keyframes jc-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes jc-dishCycle {
+  0% { opacity: 0; transform: translateY(16px) scale(0.88); }
+  3% { opacity: 1; transform: translateY(0) scale(1); }
+  22% { opacity: 1; transform: translateY(0) scale(1); }
+  25% { opacity: 0; transform: translateY(-16px) scale(0.88); }
+  100% { opacity: 0; }
+}
+
+@keyframes jc-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes jc-sheen {
+  0% { transform: translateX(-130%) skewX(-18deg); }
+  55%, 100% { transform: translateX(240%) skewX(-18deg); }
+}
+
+@keyframes jc-kenburns {
+  0% { transform: scale(1.08) translate(0,0); }
+  50% { transform: scale(1.2) translate(-2.5%, -2%); }
+  100% { transform: scale(1.08) translate(0,0); }
+}
+
+@keyframes jc-twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.65); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes jc-wave {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-25%); }
+}
+
+.animate-jc-driftUp {
+  animation: jc-driftUp linear infinite;
+}
+
+.animate-jc-floatY {
+  animation: jc-floatY 5.5s ease-in-out infinite;
+}
+
+.animate-jc-floatYsm {
+  animation: jc-floatYsm 6.5s ease-in-out infinite;
+}
+
+.animate-jc-pulseGlow {
+  animation: jc-pulseGlow 6s ease-in-out infinite;
+}
+
+.animate-jc-steam {
+  animation: jc-steam ease-out infinite;
+}
+
+.animate-jc-ringPulse {
+  animation: jc-ringPulse 3.4s ease-out infinite;
+}
+
+.animate-jc-spin {
+  animation: jc-spin 26s linear infinite;
+}
+
+.animate-jc-dishCycle {
+  animation: jc-dishCycle 10.4s ease-in-out infinite;
+}
+
+.animate-jc-shimmer {
+  animation: jc-shimmer 5s linear infinite;
+}
+
+.animate-jc-sheen {
+  animation: jc-sheen 7s ease-in-out infinite;
+}
+
+.animate-jc-kenburns {
+  animation: jc-kenburns 22s ease-in-out infinite;
+}
+
+.animate-jc-twinkle {
+  animation: jc-twinkle 3s ease-in-out infinite;
+}
+
+.animate-jc-wave {
+  animation: jc-wave 6s linear infinite;
+}
+
+/* Mobile responsiveness for the Jafa hero card */
+.jafa-hero-design-wrap {
+  overflow: visible;
+}
+
+@media (max-width: 640px) {
+  .jafa-hero-design-wrap {
+    padding: 16px 8px;
+  }
+  .jafa-hero-design-card {
+    transform: scale(0.82);
+    transform-origin: top center;
+    margin-bottom: -60px;
+  }
+}
+
+@media (max-width: 380px) {
+  .jafa-hero-design-card {
+    transform: scale(0.72);
+    margin-bottom: -90px;
+  }
+}
