@@ -116,10 +116,11 @@ export default function JaffaStoryCard() {
           }}
         >
       {/* Background image - Jaffa city */}
-      <div
-        className="absolute inset-0 bg-cover bg-center animate-jc-kenburns"
+      <img
+        src="/hero-logo.jpg"
+        alt="يافا"
+        className="absolute inset-0 w-full h-full object-cover animate-jc-kenburns"
         style={{
-          backgroundImage: "url(/hero-logo.jpg)",
           animation: "jc-kenburns 22s ease-in-out infinite",
         }}
       />
