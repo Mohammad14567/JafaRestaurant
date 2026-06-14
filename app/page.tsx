@@ -285,25 +285,8 @@ export default function HomePage() {
             </motion.div>
           </motion.div>
 
-          {/* Hero image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.92, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-            className="relative mx-auto hidden md:block"
-          >
-            <div className="absolute inset-0 -z-10 scale-110 rounded-full bg-clay-600/20 blur-3xl" />
-            <div className="relative mx-auto aspect-square w-72 overflow-hidden rounded-[2.5rem] ring-4 ring-white/10 shadow-2xl md:w-96 animate-float">
-              <Image
-                src="/hero-logo.jpg"
-                alt="شعار مطعم يافا"
-                fill
-                priority
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-olive-900/40 to-transparent" />
-            </div>
-          </motion.div>
+          {/* Hero image removed */}
+          <div className="hidden md:block" />
         </div>
 
         {/* Bottom wave with enhanced SVG */}
@@ -658,7 +641,7 @@ export default function HomePage() {
             className="relative mx-auto order-1 md:order-2"
           >
             <div className="absolute inset-0 -z-10 scale-105 rounded-[2rem] bg-clay-200/30 blur-2xl" />
-            <div className="relative mx-auto w-72 md:w-[430px]">
+            <div className="relative mx-auto w-full max-w-[430px] px-4 sm:px-0">
               <JaffaStoryCard />
             </div>
             {/* Decorative elements */}
