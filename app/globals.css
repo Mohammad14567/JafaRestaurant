@@ -39,6 +39,21 @@ body {
   color: transparent;
 }
 
+.text-gradient-hero {
+  background: linear-gradient(120deg, #f5b3a9, #cb4230, #f5b3a9);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
 /* subtle scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
