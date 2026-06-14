@@ -9,7 +9,6 @@ export default function JaffaStoryCard() {
         position: "relative",
         borderRadius: "30px",
         overflow: "hidden",
-        background: "radial-gradient(circle at 82% 26%, rgba(216, 74, 54, 0.07), transparent 52%), linear-gradient(rgb(251, 248, 241), rgb(240, 235, 222))",
         padding: "60px 30px",
         display: "flex",
         justifyContent: "center",

@@ -25,7 +25,6 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import toast from "react-hot-toast";
-import JafaHeroDesign from "@/components/JafaHeroDesign";
 import JaffaStoryCard from "@/components/JaffaStoryCard";
 
 const fadeUp = {
@@ -286,14 +285,24 @@ export default function HomePage() {
             </motion.div>
           </motion.div>
 
-          {/* Hero graphic card (replaces hero picture) */}
+          {/* Hero image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.92, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            className="relative mx-auto block w-full max-w-[520px]"
+            className="relative mx-auto hidden md:block"
           >
-            <JafaHeroDesign />
+            <div className="absolute inset-0 -z-10 scale-110 rounded-full bg-clay-600/20 blur-3xl" />
+            <div className="relative mx-auto aspect-square w-72 overflow-hidden rounded-[2.5rem] ring-4 ring-white/10 shadow-2xl md:w-96 animate-float">
+              <Image
+                src="/hero-logo.jpg"
+                alt="شعار مطعم يافا"
+                fill
+                priority
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-olive-900/40 to-transparent" />
+            </div>
           </motion.div>
         </div>
 
