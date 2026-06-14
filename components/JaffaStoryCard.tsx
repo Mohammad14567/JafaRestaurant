@@ -115,23 +115,14 @@ export default function JaffaStoryCard() {
             outline: "rgba(192, 57, 43, 0.2) solid 1px",
           }}
         >
-          {/* Background image - Jaffa city */}
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              overflow: "hidden",
-            }}
-          >
-            <img
-              src="/hero-logo.jpg"
-              alt="يافا"
-              className="absolute inset-0 w-full h-full object-cover animate-jc-kenburns"
-              style={{
-                animation: "jc-kenburns 22s ease-in-out infinite",
-              }}
-            />
-          </div>
+      {/* Background image - Jaffa city */}
+      <div
+        className="absolute inset-0 bg-cover bg-center animate-jc-kenburns"
+        style={{
+          backgroundImage: "url(/hero-logo.jpg)",
+          animation: "jc-kenburns 22s ease-in-out infinite",
+        }}
+      />
 
           {/* Overlays */}
           <div
