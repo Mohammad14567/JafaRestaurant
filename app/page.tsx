@@ -160,12 +160,12 @@ export default function HomePage() {
           }} />
         </div>
 
-        <div className="relative mx-auto grid max-w-7xl w-full items-center gap-12 px-6 py-20 md:grid-cols-2 md:px-8 md:py-0">
+        <div className="relative mx-auto flex max-w-7xl w-full items-center justify-center px-6 py-20 md:px-8 md:py-0">
           <motion.div
             initial="hidden"
             animate="show"
             variants={fadeUp}
-            className="text-center md:text-right"
+            className="text-center mx-auto"
           >
             {/* Animated badge */}
             <motion.div
@@ -236,7 +236,7 @@ export default function HomePage() {
 
             {/* Buttons with enhanced styling */}
             <motion.div 
-              className="mt-10 flex flex-wrap justify-center gap-4 md:justify-start"
+              className="mt-10 flex flex-wrap justify-center gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
@@ -260,7 +260,7 @@ export default function HomePage() {
 
             {/* Quick stats bar */}
             <motion.div
-              className="mt-12 flex items-center gap-6 justify-center md:justify-start"
+              className="mt-12 flex items-center gap-6 justify-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.6 }}
