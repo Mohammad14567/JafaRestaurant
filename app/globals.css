@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cairo: "Cairo";
+  --font-tajawal: "Tajawal";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #faf6ef;
+  color: #2a2a28;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- Palestinian tatreez (cross-stitch) divider & accents ---- */
+.tatreez-band {
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='18' viewBox='0 0 40 18'%3E%3Cg fill='%23CE1126'%3E%3Cpath d='M20 0l4 4-4 4-4-4z'/%3E%3Cpath d='M8 6l3 3-3 3-3-3z'/%3E%3Cpath d='M32 6l3 3-3 3-3-3z'/%3E%3Cpath d='M20 10l4 4-4 4-4-4z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 40px 18px;
+  background-repeat: repeat-x;
+  opacity: 0.9;
+}
+
+.tatreez-soft {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='%2349542c' fill-opacity='0.05'%3E%3Cpath d='M30 6l5 5-5 5-5-5zM12 24l5 5-5 5-5-5zM48 24l5 5-5 5-5-5zM30 42l5 5-5 5-5-5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* gradient text helper */
+.text-gradient {
+  background: linear-gradient(120deg, #cb4230, #aa3324);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* subtle scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4dbb5;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b8c388;
+}
+
+.glass {
+  background: rgba(250, 246, 239, 0.72);
+  backdrop-filter: saturate(140%) blur(12px);
+}
