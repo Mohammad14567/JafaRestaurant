@@ -123,6 +123,10 @@ export default function JaffaStoryCard() {
         style={{
           animation: "jc-kenburns 22s ease-in-out infinite",
         }}
+        onError={(e) => {
+          console.error("Image failed to load:", e);
+          e.currentTarget.style.backgroundColor = "#ccc";
+        }}
       />
 
           {/* Overlays */}
