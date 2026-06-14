@@ -475,7 +475,7 @@ export default function HomePage() {
               تجربة فريدة في كل طبق
             </h2>
           </motion.div>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-3">
             {features.map((f, i) => (
               <motion.div
                 key={f.title}
@@ -484,13 +484,13 @@ export default function HomePage() {
                 whileInView="show"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="rounded-3xl bg-cream p-8 shadow-card ring-1 ring-olive-100 transition-all duration-300 hover:shadow-soft hover:-translate-y-1"
+                className="rounded-3xl bg-cream p-6 sm:p-8 shadow-card ring-1 ring-olive-100 transition-all duration-300 hover:shadow-soft hover:-translate-y-1"
               >
-                <div className="mb-5 inline-flex rounded-2xl bg-clay-50 p-4 text-clay-600 ring-1 ring-clay-100">
-                  <f.icon className="h-8 w-8" />
+                <div className="mb-5 inline-flex rounded-2xl bg-clay-50 p-3 sm:p-4 text-clay-600 ring-1 ring-clay-100">
+                  <f.icon className="h-6 w-6 sm:h-8 sm:w-8" />
                 </div>
-                <h3 className="mb-3 text-xl font-bold text-olive-900">{f.title}</h3>
-                <p className="leading-relaxed text-olive-600">{f.text}</p>
+                <h3 className="mb-3 text-lg sm:text-xl font-bold text-olive-900">{f.title}</h3>
+                <p className="leading-relaxed text-olive-600 text-sm sm:text-base">{f.text}</p>
               </motion.div>
             ))}
           </div>
@@ -599,13 +599,13 @@ export default function HomePage() {
       <section id="about" className="relative overflow-hidden bg-white py-16 md:py-24">
         <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-clay-50/50 blur-3xl" />
         <div className="absolute left-0 bottom-0 h-96 w-96 rounded-full bg-olive-50/50 blur-3xl" />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2 md:px-8">
+        <div className="relative mx-auto flex flex-col md:grid md:grid-cols-2 max-w-7xl items-center gap-8 md:gap-12 px-6 md:px-8">
           <motion.div
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
             variants={fadeUp}
-            className="order-2 md:order-1"
+            className="order-2 md:order-1 w-full"
           >
             <h2 className="font-display text-3xl font-extrabold text-olive-900 md:text-4xl leading-tight">
               قصّتنا تبدأ من <span className="text-clay-600">يافا</span>
@@ -615,7 +615,7 @@ export default function HomePage() {
               أصيلة — من المسخّن والمقلوبة إلى المسبّحة والكنافة — محضّرة بوصفات
               توارثناها جيلاً بعد جيل، لتعيش معنا حكاية النكهة الفلسطينية الحقيقية.
             </p>
-            <div className="mt-8 grid grid-cols-3 gap-4 text-center">
+            <div className="mt-8 grid grid-cols-3 gap-2 sm:gap-4 text-center">
               {[
                 ["+20", "صنف شعبي"],
                 ["+5000", "عميل سعيد"],
@@ -624,10 +624,10 @@ export default function HomePage() {
                 <motion.div
                   key={l}
                   whileHover={{ scale: 1.05 }}
-                  className="rounded-2xl bg-cream p-5 ring-1 ring-olive-100 shadow-sm transition-all hover:shadow-card"
+                  className="rounded-2xl bg-cream p-3 sm:p-5 ring-1 ring-olive-100 shadow-sm transition-all hover:shadow-card"
                 >
-                  <p className="font-display text-3xl font-extrabold text-clay-600">{n}</p>
-                  <p className="mt-1 text-sm text-olive-500 font-medium">{l}</p>
+                  <p className="font-display text-2xl sm:text-3xl font-extrabold text-clay-600">{n}</p>
+                  <p className="mt-1 text-xs sm:text-sm text-olive-500 font-medium">{l}</p>
                 </motion.div>
               ))}
             </div>
@@ -638,7 +638,7 @@ export default function HomePage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="relative mx-auto order-1 md:order-2"
+            className="relative mx-auto order-1 md:order-2 w-full flex justify-center"
           >
             <div className="absolute inset-0 -z-10 scale-105 rounded-[2rem] bg-clay-200/30 blur-2xl" />
             <JaffaStoryCard />
