@@ -306,7 +306,7 @@ export default function HomePage() {
 
             <div className="relative mx-auto aspect-square w-80 overflow-hidden rounded-[3rem] ring-1 ring-white/10 shadow-2xl lg:w-96">
               <Image
-                src="/logo.jpeg"
+                src="/hero-logo.jpg"
                 alt="شعار مطعم يافا"
                 fill
                 priority
