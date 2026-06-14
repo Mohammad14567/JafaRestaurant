@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 export default function JaffaStoryCard() {
   return (
     <div
@@ -125,12 +123,10 @@ export default function JaffaStoryCard() {
               overflow: "hidden",
             }}
           >
-            <Image
+            <img
               src="/hero-logo.jpg"
               alt="يافا"
-              fill
-              sizes="(max-width: 768px) 100vw, 430px"
-              className="object-cover animate-jc-kenburns"
+              className="absolute inset-0 w-full h-full object-cover animate-jc-kenburns"
               style={{
                 animation: "jc-kenburns 22s ease-in-out infinite",
               }}
