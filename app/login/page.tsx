@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -9,6 +9,14 @@ import { Mail, Lock, User as UserIcon, Loader2, AlertCircle } from "lucide-react
 import toast from "react-hot-toast";
 
 export default function LoginPage() {
+  return (
+    <Suspense fallback={null}>
+      <LoginForm />
+    </Suspense>
+  );
+}
+
+function LoginForm() {
   const { signIn, signUp, ready } = useAuth();
   const router = useRouter();
   const params = useSearchParams();

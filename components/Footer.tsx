@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, Clock, Instagram, Facebook } from "lucide-react";
+import { MapPin, Phone, Clock, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -19,18 +19,23 @@ export default function Footer() {
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-olive-300">
             نكهة فلسطينية أصيلة تجمع دفء البيت وعراقة المطبخ الشعبي، نقدّمها لك
-            بحب من قلب يافا.
+            بحب من قلب فلسطين.
+          </p>
+          <p className="mt-3 text-sm text-olive-300">
+            صاحب المطعم: <span className="font-semibold text-white">صلاح راعي</span>
           </p>
         </div>
 
         <div>
           <h4 className="mb-4 font-bold text-white">تواصل معنا</h4>
           <ul className="space-y-3 text-sm text-olive-200">
-            <li className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-clay-400" /> شارع البحر، يافا
+            <li className="flex items-start gap-2">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-clay-400" />
+              <span>فلسطين - قلقيلية - الشارع الغربي، بجانب عمارة حسن القبعة</span>
             </li>
             <li className="flex items-center gap-2">
-              <Phone className="h-4 w-4 text-clay-400" /> 1234 567 059
+              <Phone className="h-4 w-4 text-clay-400" />
+              <a href="tel:+5342550599" className="hover:text-white">+53 42 550599</a>
             </li>
             <li className="flex items-center gap-2">
               <Clock className="h-4 w-4 text-clay-400" /> يومياً ١٠ صباحاً – ١٢ منتصف الليل
@@ -46,10 +51,13 @@ export default function Footer() {
             <li><Link href="/cart" className="hover:text-white">سلة الطلبات</Link></li>
           </ul>
           <div className="mt-5 flex gap-3">
-            <a href="#" className="rounded-full bg-olive-800 p-2.5 transition hover:bg-clay-600" aria-label="انستغرام">
-              <Instagram className="h-5 w-5" />
-            </a>
-            <a href="#" className="rounded-full bg-olive-800 p-2.5 transition hover:bg-clay-600" aria-label="فيسبوك">
+            <a
+              href="https://www.facebook.com/profile.php?id=100063592714808"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-olive-800 p-2.5 transition hover:bg-clay-600"
+              aria-label="فيسبوك"
+            >
               <Facebook className="h-5 w-5" />
             </a>
           </div>
