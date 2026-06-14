@@ -129,6 +129,7 @@ export default function JaffaStoryCard() {
               src="/hero-logo.jpg"
               alt="يافا"
               fill
+              sizes="(max-width: 768px) 100vw, 430px"
               className="object-cover animate-jc-kenburns"
               style={{
                 animation: "jc-kenburns 22s ease-in-out infinite",
