@@ -117,7 +117,7 @@ export default function JaffaStoryCard() {
         >
       {/* Background image - Jaffa city */}
       <img
-        src="/hero-logo.jpg"
+        src="./hero-logo.jpg"
         alt="يافا"
         className="absolute inset-0 w-full h-full object-cover animate-jc-kenburns"
         style={{
