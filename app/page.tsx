@@ -641,9 +641,7 @@ export default function HomePage() {
             className="relative mx-auto order-1 md:order-2"
           >
             <div className="absolute inset-0 -z-10 scale-105 rounded-[2rem] bg-clay-200/30 blur-2xl" />
-            <div className="relative mx-auto w-full max-w-[430px] px-4 sm:px-0">
-              <JaffaStoryCard />
-            </div>
+            <JaffaStoryCard />
             {/* Decorative elements */}
             <div className="absolute -top-4 -right-4 h-24 w-24 rounded-full bg-clay-100/50 blur-xl" />
             <div className="absolute -bottom-4 -left-4 h-32 w-32 rounded-full bg-olive-100/50 blur-xl" />
